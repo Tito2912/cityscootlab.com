@@ -1,0 +1,9 @@
+# robots.txt - Cityscootlab (Netlify)
+# Allow full crawl and point crawlers to the sitemap index plus locale maps.
+
+User-agent: *
+Disallow:
+
+Sitemap: https://cityscootlab.com/sitemap.xml
+Sitemap: https://cityscootlab.com/sitemaps/sitemap-en.xml
+Sitemap: https://cityscootlab.com/sitemaps/sitemap-fr.xml

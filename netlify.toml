@@ -1,0 +1,116 @@
+# netlify.toml - Cityscootlab
+# Build: static site, no server-side code
+[build]
+  publish = "."
+
+######################################################################
+# Global security headers (strict but compatible with GA4 + YouTube) #
+######################################################################
+[[headers]]
+  for = "/*"
+  [headers.values]
+    # Content Security Policy
+    # NOTE: inline scripts are allowed only with the matching nonce used in HTML: nonce="csl-nonce-2025"
+    Content-Security-Policy = """
+      default-src 'self';
+      script-src 'self' 'nonce-csl-nonce-2025' https://www.googletagmanager.com https://www.google-analytics.com https://www.gstatic.com;
+      connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com https://stats.g.doubleclick.net https://api.indexnow.org;
+      img-src 'self' data: blob: https://i.ytimg.com;
+      style-src 'self';
+      font-src 'self' data:;
+      frame-src https://www.youtube-nocookie.com;
+      base-uri 'none';
+      form-action 'self';
+      object-src 'none';
+      frame-ancestors 'self';
+      upgrade-insecure-requests;
+    """
+    # Other security headers
+    Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload"
+    Referrer-Policy           = "strict-origin-when-cross-origin"
+    X-Content-Type-Options    = "nosniff"
+    X-Frame-Options           = "DENY"
+    Permissions-Policy        = "accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()"
+    Cross-Origin-Opener-Policy = "same-origin"
+    Cross-Origin-Resource-Policy = "same-site"
+
+##########################################
+# HTML: short cache, always revalidate   #
+##########################################
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/fr/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+##########################################
+# Static assets: long cache + immutable  #
+##########################################
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/images/cityscootlab-icon-*.png"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/images/favicon.ico"
+  [headers.values]
+    Cache-Control = "public, max-age=604800, must-revalidate"
+
+##########################################
+# Crawling files: modest cache           #
+##########################################
+[[headers]]
+  for = "/robots.txt"
+  [headers.values]
+    Cache-Control = "public, max-age=3600"
+
+[[headers]]
+  for = "/sitemap.xml"
+  [headers.values]
+    Cache-Control = "public, max-age=3600"
+
+[[headers]]
+  for = "/sitemaps/*"
+  [headers.values]
+    Cache-Control = "public, max-age=3600"
+
+#############################################################
+# IndexNow key (static file served from repo root)          #
+# Ensure a file named: /fc1887717a84459fabe3f4984e2669d7.txt
+# with the exact content: fc1887717a84459fabe3f4984e2669d7  #
+#############################################################
+[[headers]]
+  for = "/fc1887717a84459fabe3f4984e2669d7.txt"
+  [headers.values]
+    Content-Type  = "text/plain; charset=utf-8"
+    Cache-Control = "public, max-age=31536000, immutable"
+
+#############################################################
+# Performance hints                                         #
+#############################################################
+[[headers]]
+  for = "/"
+  [headers.values]
+    # Preload CSS globally (safe for a single stylesheet)
+    Link = "</assets/styles.min.css>; rel=preload; as=style"
+
+[[headers]]
+  for = "/fr/"
+  [headers.values]
+    Link = "</assets/styles.min.css>; rel=preload; as=style"
+
+# Redirect rules are kept in the separate `_redirects` file as requested.

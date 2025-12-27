@@ -1,0 +1,20 @@
+# ============================
+# Cityscootlab - _redirects
+# SAFE ordering to avoid loops
+# ============================
+
+#############################################
+# 1) SAFE GUARD - lock French subtree first #
+#    Disabled to avoid /fr/ redirect loop   #
+#############################################
+#/fr        /fr/         301!
+
+#########################################################
+# 2) English override path - bypass language redirect   #
+#########################################################
+/en/*      /:splat      200
+/en        /            200
+
+#########################################################
+# 3) Language-based redirect - ROOT ONLY (no subpaths!) #
+#########################################################

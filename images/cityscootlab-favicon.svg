@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <clipPath id="r">
+      <rect x="0" y="0" width="512" height="512" rx="92" ry="92"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#r)">
+    <rect width="512" height="512" fill="#0B0F1A"/>
+    <!-- Lightning -->
+    <path d="M256 92 L200 246 L248 246 L200 420 L324 236 L276 236 Z" fill="#00E887"/>
+    <!-- Wheel ring -->
+    <circle cx="256" cy="320" r="132" fill="#FFFFFF"/>
+    <circle cx="256" cy="320" r="90" fill="#121826"/>
+    <circle cx="256" cy="320" r="28" fill="#FFFFFF"/>
+    <!-- Road -->
+    <rect x="120" y="380" width="272" height="18" rx="9" fill="#FFFFFF" opacity="0.16"/>
+  </g>
+</svg>

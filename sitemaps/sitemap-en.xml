@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Home (EN) -->
+  <url>
+    <loc>https://cityscootlab.com/</loc>
+    <lastmod>2025-11-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.00</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cityscootlab.com/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cityscootlab.com/"/>
+    <xhtml:link rel="alternate" hreflang="fr-fr" href="https://cityscootlab.com/fr/"/>
+  </url>
+
+  <!-- Blog index (EN) -->
+  <url>
+    <loc>https://cityscootlab.com/blog</loc>
+    <lastmod>2025-11-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cityscootlab.com/blog"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cityscootlab.com/blog"/>
+    <xhtml:link rel="alternate" hreflang="fr-fr" href="https://cityscootlab.com/fr/blog"/>
+  </url>
+
+  <!-- Blog article 1 (EN) -->
+  <url>
+    <loc>https://cityscootlab.com/blog-1</loc>
+    <lastmod>2025-11-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.82</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cityscootlab.com/blog-1"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cityscootlab.com/blog-1"/>
+    <xhtml:link rel="alternate" hreflang="fr-fr" href="https://cityscootlab.com/fr/blog-1"/>
+  </url>
+
+  <!-- Legal notice (EN) -->
+  <url>
+    <loc>https://cityscootlab.com/legal-notice</loc>
+    <lastmod>2025-11-02</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.40</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cityscootlab.com/legal-notice"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cityscootlab.com/legal-notice"/>
+    <xhtml:link rel="alternate" hreflang="fr-fr" href="https://cityscootlab.com/fr/mentions-legales"/>
+  </url>
+
+  <!-- Privacy policy (EN) -->
+  <url>
+    <loc>https://cityscootlab.com/privacy-policy</loc>
+    <lastmod>2025-11-02</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.40</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cityscootlab.com/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cityscootlab.com/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="fr-fr" href="https://cityscootlab.com/fr/politique-de-confidentialite"/>
+  </url>
+
+</urlset>

@@ -1,0 +1,19 @@
+# Cityscootlab llms.txt - align with emerging crawler guidance
+User-agent: GPTBot
+Disallow:
+
+User-agent: ChatGPT-User
+Disallow:
+
+User-agent: OAI-SearchBot
+Disallow:
+
+User-agent: Google-Extended
+Disallow:
+
+User-agent: *
+Disallow:
+
+Contact: https://cityscootlab.com/legal-notice
+Policy: https://cityscootlab.com/privacy-policy
+Sitemap: https://cityscootlab.com/sitemap.xml
