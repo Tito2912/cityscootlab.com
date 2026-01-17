@@ -3,6 +3,14 @@
 # SAFE ordering to avoid loops
 # ============================
 
+########################################
+# 0) Canonical host (www -> apex)       #
+#    Keep verification files reachable  #
+########################################
+/fc1887717a84459fabe3f4984e2669d7.txt  /fc1887717a84459fabe3f4984e2669d7.txt  200  Host=www.cityscootlab.com
+/BingSiteAuth.xml                      /BingSiteAuth.xml                      200  Host=www.cityscootlab.com
+/*                                     https://cityscootlab.com/:splat        301! Host=www.cityscootlab.com
+
 #############################################
 # 1) SAFE GUARD - lock French subtree first #
 #    Disabled to avoid /fr/ redirect loop   #
@@ -13,9 +21,6 @@
 # 1b) Serve French home without redirect    #
 #############################################
 /fr/      /fr/index.html   200!
-# Host-specific safeguard for Semrush hreflang check (bypasses cached 301 loops)
-https://cityscootlab.com/fr/    /fr/index.html   200!
-https://www.cityscootlab.com/fr/    /fr/index.html   200!
 
 #########################################################
 # 2) English override path - bypass language redirect   #
@@ -64,28 +69,6 @@ https://www.cityscootlab.com/fr/    /fr/index.html   200!
 # 4c) French subtree passthrough (after clean URLs to keep 301s active)
 ########################################
 /fr/*      /fr/:splat   200
-
-########################################
-# 4d) Host + protocol canonicalization #
-########################################
-https://www.cityscootlab.com/index.html        https://cityscootlab.com/                  301!
-http://www.cityscootlab.com/index.html         https://cityscootlab.com/                  301!
-https://cityscootlab.com/index.html            https://cityscootlab.com/                  301!
-http://cityscootlab.com/index.html             https://cityscootlab.com/                  301!
-
-https://www.cityscootlab.com/fr/index.html     https://cityscootlab.com/fr/               301!
-http://www.cityscootlab.com/fr/index.html      https://cityscootlab.com/fr/               301!
-https://cityscootlab.com/fr/index.html         https://cityscootlab.com/fr/               301!
-http://cityscootlab.com/fr/index.html          https://cityscootlab.com/fr/               301!
-
-https://www.cityscootlab.com/*.html            https://cityscootlab.com/:splat            301!
-http://www.cityscootlab.com/*.html             https://cityscootlab.com/:splat            301!
-https://cityscootlab.com/*.html                https://cityscootlab.com/:splat            301!
-http://cityscootlab.com/*.html                 https://cityscootlab.com/:splat            301!
-
-http://www.cityscootlab.com/*                  https://cityscootlab.com/:splat            301!
-http://cityscootlab.com/*                      https://cityscootlab.com/:splat            301!
-https://www.cityscootlab.com/*                 https://cityscootlab.com/:splat            301!
 
 ########################################
 # 5) IndexNow key - ne pas rediriger   #
