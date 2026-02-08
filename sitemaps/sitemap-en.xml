@@ -12,7 +12,10 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://cityscootlab.com/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://cityscootlab.com/"/>
     <xhtml:link rel="alternate" hreflang="fr-fr" href="https://cityscootlab.com/fr/"/>
-  </url>
+  
+    <xhtml:link rel="alternate" hreflang="es" href="https://cityscootlab.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://cityscootlab.com/de/"/>
+</url>
 
   <!-- Blog index (EN) -->
   <url>
@@ -23,7 +26,10 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://cityscootlab.com/blog"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://cityscootlab.com/blog"/>
     <xhtml:link rel="alternate" hreflang="fr-fr" href="https://cityscootlab.com/fr/blog"/>
-  </url>
+  
+    <xhtml:link rel="alternate" hreflang="es" href="https://cityscootlab.com/es/blog"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://cityscootlab.com/de/blog"/>
+</url>
 
   <!-- Blog article 1 (EN) -->
   <url>
@@ -34,7 +40,10 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://cityscootlab.com/blog-1"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://cityscootlab.com/blog-1"/>
     <xhtml:link rel="alternate" hreflang="fr-fr" href="https://cityscootlab.com/fr/blog-1"/>
-  </url>
+  
+    <xhtml:link rel="alternate" hreflang="es" href="https://cityscootlab.com/es/blog-1"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://cityscootlab.com/de/blog-1"/>
+</url>
 
   <!-- Legal notice (EN) -->
   <url>
@@ -45,7 +54,10 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://cityscootlab.com/legal-notice"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://cityscootlab.com/legal-notice"/>
     <xhtml:link rel="alternate" hreflang="fr-fr" href="https://cityscootlab.com/fr/mentions-legales"/>
-  </url>
+  
+    <xhtml:link rel="alternate" hreflang="es" href="https://cityscootlab.com/es/legal-notice"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://cityscootlab.com/de/legal-notice"/>
+</url>
 
   <!-- Privacy policy (EN) -->
   <url>
@@ -56,6 +68,9 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://cityscootlab.com/privacy-policy"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://cityscootlab.com/privacy-policy"/>
     <xhtml:link rel="alternate" hreflang="fr-fr" href="https://cityscootlab.com/fr/politique-de-confidentialite"/>
-  </url>
+  
+    <xhtml:link rel="alternate" hreflang="es" href="https://cityscootlab.com/es/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://cityscootlab.com/de/privacy-policy"/>
+</url>
 
 </urlset>

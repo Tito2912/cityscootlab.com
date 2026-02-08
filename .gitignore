@@ -7,6 +7,11 @@ ahrefs-export/
 *_slow-page_*.csv
 *_hreflang_conflicts_on_page_*.csv
 
+# Local exports / data pulls
+aliexpress_shortlist_*.csv
+aliexpress_shortlist_*.json
+hot_products_*.csv
+
 # OS / tooling
 __pycache__/
 .DS_Store

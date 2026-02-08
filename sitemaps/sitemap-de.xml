@@ -3,71 +3,71 @@
   xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
-  <!-- Accueil (FR) -->
+  <!-- Home (EN) -->
   <url>
-    <loc>https://cityscootlab.com/fr/</loc>
+    <loc>https://cityscootlab.com/de/</loc>
     <lastmod>2026-01-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.00</priority>
-    <xhtml:link rel="alternate" hreflang="fr-fr" href="https://cityscootlab.com/fr/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://cityscootlab.com/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://cityscootlab.com/"/>
+    <xhtml:link rel="alternate" hreflang="fr-fr" href="https://cityscootlab.com/fr/"/>
   
     <xhtml:link rel="alternate" hreflang="es" href="https://cityscootlab.com/es/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://cityscootlab.com/de/"/>
 </url>
 
-  <!-- Blog (FR) -->
+  <!-- Blog index (EN) -->
   <url>
-    <loc>https://cityscootlab.com/fr/blog</loc>
+    <loc>https://cityscootlab.com/de/blog</loc>
     <lastmod>2025-11-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
-    <xhtml:link rel="alternate" hreflang="fr-fr" href="https://cityscootlab.com/fr/blog"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://cityscootlab.com/blog"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://cityscootlab.com/blog"/>
+    <xhtml:link rel="alternate" hreflang="fr-fr" href="https://cityscootlab.com/fr/blog"/>
   
     <xhtml:link rel="alternate" hreflang="es" href="https://cityscootlab.com/es/blog"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://cityscootlab.com/de/blog"/>
 </url>
 
-  <!-- Article 1 (FR) -->
+  <!-- Blog article 1 (EN) -->
   <url>
-    <loc>https://cityscootlab.com/fr/blog-1</loc>
+    <loc>https://cityscootlab.com/de/blog-1</loc>
     <lastmod>2025-11-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.82</priority>
-    <xhtml:link rel="alternate" hreflang="fr-fr" href="https://cityscootlab.com/fr/blog-1"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://cityscootlab.com/blog-1"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://cityscootlab.com/blog-1"/>
+    <xhtml:link rel="alternate" hreflang="fr-fr" href="https://cityscootlab.com/fr/blog-1"/>
   
     <xhtml:link rel="alternate" hreflang="es" href="https://cityscootlab.com/es/blog-1"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://cityscootlab.com/de/blog-1"/>
 </url>
 
-  <!-- Mentions légales (FR) -->
+  <!-- Legal notice (EN) -->
   <url>
-    <loc>https://cityscootlab.com/fr/mentions-legales</loc>
+    <loc>https://cityscootlab.com/de/legal-notice</loc>
     <lastmod>2025-11-02</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.40</priority>
-    <xhtml:link rel="alternate" hreflang="fr-fr" href="https://cityscootlab.com/fr/mentions-legales"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://cityscootlab.com/legal-notice"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://cityscootlab.com/legal-notice"/>
+    <xhtml:link rel="alternate" hreflang="fr-fr" href="https://cityscootlab.com/fr/mentions-legales"/>
   
     <xhtml:link rel="alternate" hreflang="es" href="https://cityscootlab.com/es/legal-notice"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://cityscootlab.com/de/legal-notice"/>
 </url>
 
-  <!-- Politique de confidentialité (FR) -->
+  <!-- Privacy policy (EN) -->
   <url>
-    <loc>https://cityscootlab.com/fr/politique-de-confidentialite</loc>
+    <loc>https://cityscootlab.com/de/privacy-policy</loc>
     <lastmod>2025-11-02</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.40</priority>
-    <xhtml:link rel="alternate" hreflang="fr-fr" href="https://cityscootlab.com/fr/politique-de-confidentialite"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://cityscootlab.com/privacy-policy"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://cityscootlab.com/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="fr-fr" href="https://cityscootlab.com/fr/politique-de-confidentialite"/>
   
     <xhtml:link rel="alternate" hreflang="es" href="https://cityscootlab.com/es/privacy-policy"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://cityscootlab.com/de/privacy-policy"/>
