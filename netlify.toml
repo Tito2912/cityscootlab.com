@@ -1,57 +1,158 @@
-# netlify.toml - Cityscootlab
-# Build: static site, no server-side code
 [build]
-  publish = "."
+  command = "npm run build && python3 scripts/indexnow_submit.py"
+  publish = "out"
 
-######################################################################
-# Global security headers (strict but compatible with GA4 + YouTube) #
-######################################################################
+[[redirects]]
+  from = "http://cityscootlab.com/*"
+  to = "https://cityscootlab.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://www.cityscootlab.com/*"
+  to = "https://cityscootlab.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.cityscootlab.com/*"
+  to = "https://cityscootlab.com/:splat"
+  status = 301
+  force = true
+
+# Old URLs -> new SEO URLs
+[[redirects]]
+  from = "/blog-1"
+  to = "/isinwheel-commuter-guide-2025"
+  status = 301
+
+[[redirects]]
+  from = "/blog-1.html"
+  to = "/isinwheel-commuter-guide-2025"
+  status = 301
+
+[[redirects]]
+  from = "/blog.html"
+  to = "/blog"
+  status = 301
+
+[[redirects]]
+  from = "/index.html"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/legal-notice.html"
+  to = "/legal-notice"
+  status = 301
+
+[[redirects]]
+  from = "/privacy-policy.html"
+  to = "/privacy-policy"
+  status = 301
+
+[[redirects]]
+  from = "/fr/blog-1"
+  to = "/fr/isinwheel-commuter-guide-2025"
+  status = 301
+
+[[redirects]]
+  from = "/fr/blog-1.html"
+  to = "/fr/isinwheel-commuter-guide-2025"
+  status = 301
+
+[[redirects]]
+  from = "/fr/blog.html"
+  to = "/fr/blog"
+  status = 301
+
+[[redirects]]
+  from = "/fr/index.html"
+  to = "/fr/"
+  status = 301
+
+[[redirects]]
+  from = "/fr/mentions-legales.html"
+  to = "/fr/mentions-legales"
+  status = 301
+
+[[redirects]]
+  from = "/fr/politique-de-confidentialite.html"
+  to = "/fr/politique-de-confidentialite"
+  status = 301
+
+[[redirects]]
+  from = "/es/blog-1"
+  to = "/es/isinwheel-commuter-guide-2025"
+  status = 301
+
+[[redirects]]
+  from = "/es/blog-1.html"
+  to = "/es/isinwheel-commuter-guide-2025"
+  status = 301
+
+[[redirects]]
+  from = "/es/blog.html"
+  to = "/es/blog"
+  status = 301
+
+[[redirects]]
+  from = "/es/index.html"
+  to = "/es/"
+  status = 301
+
+[[redirects]]
+  from = "/es/legal-notice.html"
+  to = "/es/legal-notice"
+  status = 301
+
+[[redirects]]
+  from = "/es/privacy-policy.html"
+  to = "/es/privacy-policy"
+  status = 301
+
+[[redirects]]
+  from = "/de/blog-1"
+  to = "/de/isinwheel-commuter-guide-2025"
+  status = 301
+
+[[redirects]]
+  from = "/de/blog-1.html"
+  to = "/de/isinwheel-commuter-guide-2025"
+  status = 301
+
+[[redirects]]
+  from = "/de/blog.html"
+  to = "/de/blog"
+  status = 301
+
+[[redirects]]
+  from = "/de/index.html"
+  to = "/de/"
+  status = 301
+
+[[redirects]]
+  from = "/de/legal-notice.html"
+  to = "/de/legal-notice"
+  status = 301
+
+[[redirects]]
+  from = "/de/privacy-policy.html"
+  to = "/de/privacy-policy"
+  status = 301
+
 [[headers]]
   for = "/*"
   [headers.values]
-    # Content Security Policy
-    # NOTE: inline scripts are allowed only with the matching nonce used in HTML: nonce="csl-nonce-2025"
-    Content-Security-Policy = """
-      default-src 'self';
-      script-src 'self' 'nonce-csl-nonce-2025' https://www.googletagmanager.com https://www.google-analytics.com https://www.gstatic.com;
-      connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com https://stats.g.doubleclick.net https://api.indexnow.org;
-      img-src 'self' data: blob: https://i.ytimg.com;
-      style-src 'self';
-      font-src 'self' data:;
-      frame-src https://www.youtube-nocookie.com;
-      base-uri 'none';
-      form-action 'self';
-      object-src 'none';
-      frame-ancestors 'self';
-      upgrade-insecure-requests;
-    """
-    # Other security headers
-    Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload"
-    Referrer-Policy           = "strict-origin-when-cross-origin"
-    X-Content-Type-Options    = "nosniff"
-    X-Frame-Options           = "DENY"
-    Permissions-Policy        = "accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()"
-    Cross-Origin-Opener-Policy = "same-origin"
-    Cross-Origin-Resource-Policy = "same-site"
-
-##########################################
-# HTML: short cache, always revalidate   #
-##########################################
-[[headers]]
-  for = "/*.html"
-  [headers.values]
-    Cache-Control = "public, max-age=0, must-revalidate"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=(), payment=(), usb=()"
+    X-Frame-Options = "DENY"
+    Content-Security-Policy = "default-src 'self'; base-uri 'self'; object-src 'none'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://www.gstatic.com; connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://www.googletagmanager.com https://*.google-analytics.com https://*.analytics.google.com https://stats.g.doubleclick.net; frame-src https://www.youtube-nocookie.com; frame-ancestors 'none'; form-action 'self'; upgrade-insecure-requests"
 
 [[headers]]
-  for = "/fr/*.html"
-  [headers.values]
-    Cache-Control = "public, max-age=0, must-revalidate"
-
-##########################################
-# Static assets: long cache + immutable  #
-##########################################
-[[headers]]
-  for = "/assets/*"
+  for = "/_next/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
@@ -61,56 +162,7 @@
     Cache-Control = "public, max-age=31536000, immutable"
 
 [[headers]]
-  for = "/images/cityscootlab-icon-*.png"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-
-[[headers]]
-  for = "/images/favicon.ico"
-  [headers.values]
-    Cache-Control = "public, max-age=604800, must-revalidate"
-
-##########################################
-# Crawling files: modest cache           #
-##########################################
-[[headers]]
-  for = "/robots.txt"
-  [headers.values]
-    Cache-Control = "public, max-age=3600"
-
-[[headers]]
-  for = "/sitemap.xml"
-  [headers.values]
-    Cache-Control = "public, max-age=3600"
-
-[[headers]]
-  for = "/sitemaps/*"
-  [headers.values]
-    Cache-Control = "public, max-age=3600"
-
-#############################################################
-# IndexNow key (static file served from repo root)          #
-# Ensure a file named: /fc1887717a84459fabe3f4984e2669d7.txt
-# with the exact content: fc1887717a84459fabe3f4984e2669d7  #
-#############################################################
-[[headers]]
   for = "/fc1887717a84459fabe3f4984e2669d7.txt"
   [headers.values]
-    Content-Type  = "text/plain; charset=utf-8"
+    Content-Type = "text/plain; charset=utf-8"
     Cache-Control = "public, max-age=31536000, immutable"
-
-#############################################################
-# Performance hints                                         #
-#############################################################
-[[headers]]
-  for = "/"
-  [headers.values]
-    # Preload CSS globally (safe for a single stylesheet)
-    Link = "</assets/styles.min.css>; rel=preload; as=style"
-
-[[headers]]
-  for = "/fr/"
-  [headers.values]
-    Link = "</assets/styles.min.css>; rel=preload; as=style"
-
-# Redirect rules are kept in the separate `_redirects` file as requested.

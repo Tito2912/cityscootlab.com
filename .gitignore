@@ -16,3 +16,9 @@ hot_products_*.csv
 __pycache__/
 .DS_Store
 Thumbs.db
+
+# Next.js / local build artifacts
+node_modules/
+.next/
+out/
+.vercel/
