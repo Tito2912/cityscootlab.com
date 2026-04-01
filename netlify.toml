@@ -37,6 +37,36 @@
   status = 301
 
 [[redirects]]
+  from = "/fr"
+  to = "/fr/"
+  status = 301
+
+[[redirects]]
+  from = "/fr.html"
+  to = "/fr/"
+  status = 301
+
+[[redirects]]
+  from = "/es"
+  to = "/es/"
+  status = 301
+
+[[redirects]]
+  from = "/es.html"
+  to = "/es/"
+  status = 301
+
+[[redirects]]
+  from = "/de"
+  to = "/de/"
+  status = 301
+
+[[redirects]]
+  from = "/de.html"
+  to = "/de/"
+  status = 301
+
+[[redirects]]
   from = "/index.html"
   to = "/"
   status = 301

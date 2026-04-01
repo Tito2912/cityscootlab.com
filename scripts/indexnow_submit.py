@@ -48,7 +48,7 @@ def normalize_url_path(relative_path: Path) -> str:
             url_path = f"/{parent}/"
     else:
         stem_path = relative_path.with_suffix("")
-        if stem_path.parent == Path(".") and stem_path.name in {"en", "es", "de"}:
+        if stem_path.parent == Path(".") and stem_path.name in {"en", "fr", "es", "de"}:
             url_path = f"/{stem_path.name}/"
         else:
             url_path = f"/{stem_path.as_posix()}"
