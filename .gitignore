@@ -6,6 +6,7 @@ ahrefs-export/
 *_all-issues_*.zip
 *_slow-page_*.csv
 *_hreflang_conflicts_on_page_*.csv
+cityscootlab.com-Performance-on-Search-*
 
 # Local exports / data pulls
 aliexpress_shortlist_*.csv
